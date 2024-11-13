@@ -27,15 +27,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20.16.0 # 指定 Node.js 版本
-          cache: yarn          # 缓存 yarn 的依赖包
+          cache: npm        # 缓存 npm 的依赖包
 
       # 安装依赖
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: npm install --frozen-lockfile --non-interactive
       
       # 构建项目，生成静态文件
       - name: Build
-        run: yarn build
+        run: npm build
 
       # 👆 Build steps 构建项目结束
 
