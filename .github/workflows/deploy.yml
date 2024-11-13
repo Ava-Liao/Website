@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+on:
+  # 触发工作流的条件，可以根据需要自定义
+  push:
+    branches:
+      - main  # 只在推送到 `main` 分支时触发工作流
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 检出仓库代码
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # 👇 Build steps，执行构建步骤（Node.js 项目）
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.16.0 # 指定 Node.js 版本
+          cache: yarn          # 缓存 yarn 的依赖包
+
+      # 安装依赖
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --non-interactive
+      
+      # 构建项目，生成静态文件
+      - name: Build
+        run: yarn build
+
+      # 👆 Build steps 构建项目结束
+
+      # 配置 GitHub Pages 环境
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      # 上传静态网站的构建成果（例如 `build/` 目录中的静态资源）
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: build  # 替换为构建输出路径，如 `build` 或 `public`
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
