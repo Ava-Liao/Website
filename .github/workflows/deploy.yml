@@ -35,7 +35,7 @@ jobs:
       
       # 构建项目，生成静态文件
       - name: Build
-        run: npm build
+        run: npm run build
 
       # 👆 Build steps 构建项目结束
 
