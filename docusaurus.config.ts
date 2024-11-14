@@ -11,7 +11,6 @@ const config: Config = {
   tagline: 'Fly to this world',
   favicon: 'img/favicon.ico',
 
-
   // Set the production url of your site here
   url: `https://${organizationName}.github.io`,
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -106,7 +105,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://ava-liao.github.io/Website/',
             },
           ],
         },

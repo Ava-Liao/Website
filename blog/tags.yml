@@ -1,8 +1,3 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
 hello:
   label: Hello
   permalink: /hello
@@ -17,3 +12,9 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+casual:
+  label: Casual
+  permalink: /casual
+  description: Casual ideas
+
