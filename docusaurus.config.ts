@@ -8,7 +8,7 @@ const projectName="Website"; // Usually your repo name.
 
 const config: Config = {
   title: 'Ava',
-  tagline: 'Fly to this world',
+  tagline: 'A dream buried, aching to break free.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
