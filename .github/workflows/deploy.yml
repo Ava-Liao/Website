@@ -13,6 +13,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+    id-token: write  # 用于 OIDC 令牌
+    contents: write  # 用于推送到 GitHub Pages
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
