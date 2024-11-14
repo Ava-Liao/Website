@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-const organizationName="<Ava-Liao>"; // Usually your GitHub org/user name.
-const projectName="<Website>"; // Usually your repo name.
+const organizationName="Ava-Liao"; // Usually your GitHub org/user name.
+const projectName="Website"; // Usually your repo name.
 
 const config: Config = {
   title: 'Ava',
