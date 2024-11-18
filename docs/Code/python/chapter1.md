@@ -1,14 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
+title: Python Primer
 ---
 
-# Python
-
-The book I used is [Data Structures and Algorithms in Python](https://www.amazon.com/Data-Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275)
-
-What I want to record is the hard part of the book. I will not collect the knowledge points, since I don't need to pass the exam.
-
-## Chapter 1
 ### Q1 Why bool,int,float,str,tuple,frozenset are immutable?
 Initially, I thought bool,int,float are mutable, let's see the code:
 ```python
@@ -40,6 +34,11 @@ the trucated part is the integer part of the value.
 ### Q3 Tuple class
 when there is only one element in the tuple, like(1,), we must use a comma, otherwise, it will be int type, and becomes (1).
 
-### Q4 
+### Q4 Yield
+The defference between return and yield: the yield is forward-looking and the return is backward-looking.
+
+So it means that, yield allow to step by step to aquire the results, but the return must gain the results right away.
+
+
 
 
