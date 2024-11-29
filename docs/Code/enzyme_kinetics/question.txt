@@ -1,0 +1,9 @@
+# the question that I want to ask the teacher
+
+1. My understanding:
+  I need to train the model to get the good scores, so the process is:
+  find the datasets -- do you try to cooperate with other teacher in chemical colleage? can get datasets from them?
+                    -- I found the hugging face have the datasets, it's enough?
+  train the model   -- the requirements: the accuracy will affect the scores I got? If it is, if I want to got 85 points, the accuracy that I need.
+  the essay         
+                    
