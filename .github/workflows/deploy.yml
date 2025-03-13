@@ -47,6 +47,12 @@ jobs:
       # 配置 GitHub Pages 环境
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      
+      - name: Upload Artifact (Explicit)
+        uses: actions/upload-artifact@v3.1.2  # 尝试使用特定版本
+        with:
+          name: docusaurus-build
+          path: build
 
       # 上传静态网站的构建成果（例如 `build/` 目录中的静态资源）
       - name: Upload artifact
