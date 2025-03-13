@@ -25,7 +25,7 @@ jobs:
     steps:
       # 检出仓库代码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 👇 Build steps，执行构建步骤（Node.js 项目）
       - name: Set up Node.js
@@ -46,23 +46,18 @@ jobs:
 
       # 配置 GitHub Pages 环境
       - name: Setup Pages
-        uses: actions/configure-pages@v3
-      
-      - name: Upload Artifact (Explicit)
-        uses: actions/upload-artifact@v3.1.2  # 尝试使用特定版本
-        with:
-          name: docusaurus-build
-          path: build
+        uses: actions/configure-pages@v4
+        
 
       # 上传静态网站的构建成果（例如 `build/` 目录中的静态资源）
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build  # 替换为构建输出路径，如 `build` 或 `public`
 
       # 部署到 GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GITHUB_TOKEN 进行身份验证
